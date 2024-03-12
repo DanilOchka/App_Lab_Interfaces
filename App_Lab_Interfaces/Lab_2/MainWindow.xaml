@@ -5,11 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:App_Lab_Interfaces.Lab_2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Canvas>
-        <!-- Елементи на Canvas -->
-        <Label Content="Мітка" FontSize="26" Canvas.Left="20" Canvas.Top="40"/>
-        <TextBox Text="Text" FontSize="26" Canvas.Left="40" Canvas.Top="80"/>
-        <Button Content="Кнопка" FontSize="26" Canvas.Left="60" Canvas.Top="120"/>
-    </Canvas>
+        Title="TextEditor" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="#FFCBBEBE" CornerRadius="5"  BorderThickness="2" Padding="10" Margin="5">
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5 0">
+                <Button Width="70" Height="70" Margin="5 0" ToolTip="Files">
+                    <Image Source="images/4.png"/>
+                </Button>
+                <Button Width="70" Height="70" Margin="5 0" ToolTip="Clean">
+                    <Image Source="images/2.png"/>
+                </Button>
+                <Button Width="70" Height="70" Margin="5 0" ToolTip="Copy">
+                    <Image Source="images/3.png"/>
+                </Button>
+                <Button Width="70" Height="70" Margin="5 0" ToolTip="Save">
+                    <Image Source="images/1.png"/>
+                </Button>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="1" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10" Margin="5">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <TextBox VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+                </ScrollViewer>
+                <DockPanel Grid.Row="1" VerticalAlignment="Bottom">
+                    <Button Width="40" Content="OK" DockPanel.Dock="Bottom" Margin="5" FontSize="20"/>
+                </DockPanel>
+            </Grid>
+        </Border>
+    </Grid>
+
 </Window>
