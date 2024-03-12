@@ -6,32 +6,10 @@
         xmlns:local="clr-namespace:App_Lab_Interfaces.Lab_2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-
-    <Window.Resources>
-        <!-- Стиль для Label -->
-        <Style TargetType="Label">
-            <Setter Property="FontSize" Value="26"/>
-        </Style>
-
-        <!-- Стиль для TextBox -->
-        <Style TargetType="TextBox">
-            <Setter Property="FontSize" Value="26"/>
-        </Style>
-
-        <!-- Стиль для Button -->
-        <Style TargetType="Button">
-            <Setter Property="FontSize" Value="26"/>
-        </Style>
-    </Window.Resources>
-
-    
-    <DockPanel LastChildFill="False">
-        
-        <TextBox DockPanel.Dock="Left" Height="250" Width="250" Margin="10" Text="Text" TextChanged="TextBox_TextChanged"/>
-        <StackPanel>
-            <Label Content="Мітка" HorizontalAlignment="Center" Margin="5"/>
-            <Button Margin="25 150" Width="200" Height="40"  Content="Кнопка" />
-        </StackPanel>
-        <TextBox DockPanel.Dock="Right" Height="250" Width="250" Margin="10" Text="Text" TextChanged="TextBox_TextChanged"/>
-    </DockPanel>
+    <Canvas>
+        <!-- Елементи на Canvas -->
+        <Label Content="Мітка" FontSize="26" Canvas.Left="20" Canvas.Top="40"/>
+        <TextBox Text="Text" FontSize="26" Canvas.Left="40" Canvas.Top="80"/>
+        <Button Content="Кнопка" FontSize="26" Canvas.Left="60" Canvas.Top="120"/>
+    </Canvas>
 </Window>
