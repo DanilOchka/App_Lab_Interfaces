@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace App_Lab_Interfaces
+namespace App_Lab_Interfaces.Lab_2
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml
