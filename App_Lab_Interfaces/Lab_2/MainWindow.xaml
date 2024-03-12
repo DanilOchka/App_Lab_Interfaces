@@ -24,13 +24,25 @@
         </Style>
     </Window.Resources>
 
-    <StackPanel VerticalAlignment="Center">
-        <!-- Елементи у StackPanel -->
+    <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center"  Width="548" Margin="5">
         <Label Content="Мітка" HorizontalAlignment="Center" Margin="5"/>
-        <TextBox Margin="10 1" Text="Text" TextChanged="TextBox_TextChanged"/>
-        <TextBox Margin="10 1" Text="Text" TextChanged="TextBox_TextChanged"/>
-        <TextBox Margin="10 1" Text="Text" TextChanged="TextBox_TextChanged"/>
-        <TextBox Margin="10 1" Text="Text" TextChanged="TextBox_TextChanged"/>
-        <Button Width="200" Margin="5"  Content="Кнопка"/>
-    </StackPanel>
+        <TextBox Margin="5 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="5 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="5 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="5 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="5 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="5 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="5 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Мітка" HorizontalAlignment="Center" Margin="5"/>
+        <TextBox Margin="5 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="5 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="5 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="5 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="5 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="5 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="5 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <Button Width="200" Margin="180 10 0 0"  Content="Кнопка" />
+
+    </WrapPanel>
+
 </Window>
