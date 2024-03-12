@@ -3,25 +3,34 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:App_Lab_Interfaces"
+        xmlns:local="clr-namespace:App_Lab_Interfaces.Lab_2"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid ShowGridLines="True">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="4*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+    <Window.Resources>
+        <!-- Стиль для Label -->
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="26"/>
+        </Style>
 
-        <!-- Елементи у другому стовпці -->
-        <Label Grid.Row="0" Grid.Column="1" Content="Мітка" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5"/>
-        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10" Text="Text" TextChanged="TextBox_TextChanged"/>
-        <Button Grid.Row="2" Grid.Column="1" Content="Кнопка" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5"/>
-    </Grid>
+        <!-- Стиль для TextBox -->
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="26"/>
+        </Style>
+
+        <!-- Стиль для Button -->
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="26"/>
+        </Style>
+    </Window.Resources>
+
+    <StackPanel VerticalAlignment="Center">
+        <!-- Елементи у StackPanel -->
+        <Label Content="Мітка" HorizontalAlignment="Center" Margin="5"/>
+        <TextBox Margin="10 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="10 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="10 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <TextBox Margin="10 1" Text="Text" TextChanged="TextBox_TextChanged"/>
+        <Button Width="200" Margin="5"  Content="Кнопка"/>
+    </StackPanel>
 </Window>
