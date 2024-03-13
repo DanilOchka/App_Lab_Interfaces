@@ -21,6 +21,7 @@
             <Setter Property="BorderThickness" Value="1"/>
         </Style>
 
+
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -28,17 +29,17 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Border Background="{StaticResource LinearPanelBrush}" BorderBrush="#FFCBBEBE" CornerRadius="5"  BorderThickness="2" Padding="10" Margin="5">
-            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5 0">
-                <Button Width="70" Height="70" Margin="5 0" ToolTip="Files">
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5 0" FocusManager.IsFocusScope="True">
+                <Button x:Name="filesButton" Width="70" Height="70" Margin="5 0" ToolTip="Files">
                     <Image Source="images/4.png"/>
                 </Button>
-                <Button Width="70" Height="70" Margin="5 0" ToolTip="Clean">
+                <Button Command="{x:Static local:MainWindow.ClearTextCommand}" Width="70" Height="70" Margin="5 0" ToolTip="Clean">
                     <Image Source="images/2.png"/>
                 </Button>
-                <Button Width="70" Height="70" Margin="5 0" ToolTip="Copy">
+                <Button Command="Copy" Width="70" Height="70" Margin="5 0" ToolTip="Copy">
                     <Image Source="images/3.png"/>
                 </Button>
-                <Button Width="70" Height="70" Margin="5 0" ToolTip="Save">
+                <Button Command="Paste" Width="70" Height="70" Margin="5 0" ToolTip="Insert">
                     <Image Source="images/1.png"/>
                 </Button>
             </StackPanel>
@@ -51,10 +52,12 @@
                 </Grid.RowDefinitions>
 
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <TextBox VerticalScrollBarVisibility="Visible" AcceptsReturn="True"/>
+                    <TextBox Name ="inputTextBox" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" FontSize="{Binding ElementName=fontSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"/>
                 </ScrollViewer>
                 <DockPanel Grid.Row="1" VerticalAlignment="Bottom">
-                    <Button Style="{x:Null}" Width="40" Content="OK" DockPanel.Dock="Bottom" Margin="10" FontSize="20"/>
+                    <Label VerticalAlignment="Center"  FontSize="16">Розмір Шрифту</Label>
+                    <Slider VerticalAlignment="Center" Name="fontSlider" Margin="8" MinWidth="100" Minimum="12" Maximum="100" Value="16" ></Slider>
+                    <Button Command="Save" CommandTarget="{Binding ElementName=inputTextBox}" Style="{x:Null}" Width="40" Content="OK" DockPanel.Dock="Bottom" VerticalAlignment="Center" Margin="10" FontSize="20" />
                 </DockPanel>
             </Grid>
         </Border>
